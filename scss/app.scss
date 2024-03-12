@@ -1,0 +1,27 @@
+//General
+@import "./general/variables.scss";
+@import "./general/reset.scss";
+
+//Layout
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+//Pages
+@import "./pages/index.scss";
+@import "./pages/productos.scss";
+@import "./pages/herrayacce.scss";
+@import "./pages/consejos.scss";
+@import "./pages/contacto.scss";
+
+@keyframes movimientoLogo {
+  0% {
+    width: 400px;
+    height: 400px;
+  }
+  50% {
+    background-color: lightpink;
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}

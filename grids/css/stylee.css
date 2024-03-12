@@ -1,0 +1,45 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 80px auto 45px;
+    grid-template-areas: 
+     "nav header header header"
+     "nav main main main"
+     "nav footer footer footer"
+    ;
+    column-gap: 20px;
+    row-gap: 20px;
+
+}
+header{
+    background-color: violet;
+    grid-area: header;
+}
+nav{
+    background-color: rgb(255, 205, 243);
+    grid-area: nav;
+
+}
+main{
+    background-color: black;
+    grid-area: main;
+
+}
+footer{
+    background-color: rgb(22, 100, 168);
+    grid-area: footer;
+}
+@media(max-width: 480px){
+    body{
+        grid-template-rows: 80px  50px auto 45px;
+        grid-template-areas: 
+         "header header header header"
+         "nav nav nav nav"
+         "main main main main"
+         "footer footer footer footer"
+        ;
+        row-gap: 5px;
+    
+    }
+
+}

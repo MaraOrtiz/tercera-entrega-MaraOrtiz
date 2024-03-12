@@ -1,0 +1,45 @@
+/*Estilo Main Inicio*/
+.inicio {
+  background-image: url(../imagenes/fondo.jpg);
+  background-size: cover;
+}
+.titulo-inicio {
+  @extend .abc;
+
+  &:hover {
+    color: $color-primario;
+    margin-left: 6px;
+  }
+  #hero {
+    margin-top: 0px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      color: black;
+      font-size: 24px;
+      margin-bottom: 48px;
+    }
+    a {
+      background-color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      color: black;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    @media (max-width: 480px) {
+      .titulo-inicio {
+        font-size: 30px;
+      }
+    }
+  }
+}
+/*Fin  Main Inicio*/
