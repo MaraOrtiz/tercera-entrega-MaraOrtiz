@@ -1,13 +1,4 @@
-:root {
-  --color_primario: #a84a94fd;
-  --color_primario_suave: #8527c383;
-  --color_blanco: #fff;
-  --altura_header: 100px;
-  --padding_left_right: 2rem;
-  --ancho_maximo: 1200px;
-}
-
-:root .abc, :root .contacts-us .contacts, :root .consejos-main .advice, :root .overlay .titulo-herra, :root .titulo-products h1 .titulo-inicio, :root .titulo-inicio {
+:root .abc, :root .contacts-us .contacts, :root .consejos-main .advice, :root .overlay .titulo-herra, :root .titulo-products h1 .titulo-inicio {
   background-image: linear-gradient to right, palevioletred, white;
   text-decoration: none;
   font-family: "poppins";
@@ -29,110 +20,44 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "poppins";
+  font-family: "poppins", sans-serif;
   text-decoration: none;
   color: black;
   list-style: none;
 }
 
 /*Estilo header*/
-:root {
-  --color_primario: #dfcedbfd;
-  --color_primario_suave: #c3add183;
-  --color_blanco: #fff;
-  --altura_header: 150px;
-  --padding_left_right: 2rem;
-  --ancho_maximo: 1200px;
-}
-
-.header {
-  height: var(--altura_header);
-  background-color: var(--color_primario);
-}
-.header .logo-l {
-  height: 150px;
-  margin-right: 40px;
-  animation-name: movimientoLogo;
-  animation-duration: 4s;
-  animation-timing-function: ease;
-}
-@keyframes movimientoLogo {
-  0% {
-    width: 200px;
-    height: 200px;
-  }
-  50% {
-    background-color: lightpink;
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
-.header .navbar {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 0 var(--padding_left_right);
-}
-.header .navbar .menu_hamburguesa {
-  display: none;
-  text-decoration: none;
-  justify-content: space-between;
-  width: 150px;
-}
-.header .navbar .menu_hamburguesa:checked + .ul_links {
-  height: calc(100vh - var(--altura_header));
-}
-.header .navbar .menu_hamburguesa .list_icon {
-  color: var(--color_blanco);
-  cursor: pointer;
-}
-.header .navbar input .type {
-  display: none;
-}
-.header .navbar .ul_links {
+header {
+  height: 75px;
   width: 100%;
-  background-color: var(--color_primario_suave);
-  position: absolute;
-  font-family: "poppins";
-  top: var(--altura_header);
+  position: fixed;
+  top: 0;
   left: 0;
-  height: 0;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  font-weight: 3px;
-  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px 0;
 }
-.header .navbar .ul_links a link {
-  margin-top: 0%;
-  font-size: 32px;
-  color: var(--color_blanco);
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
 }
-@media (max-width: 768x) {
-  .header .labe_hamburguesa {
-    display: none;
-  }
-  .header .ul_links {
-    padding: static;
-    width: auto;
-    height: auto;
-    flex-direction: row;
-    gap: 2rem;
-  }
-  .header .ul_links .link {
-    font-size: 1.2rem;
-    transition: 0.4s;
-    padding: 2rem 7rem;
-  }
-  .header .ul_links .link:hover {
-    background-color: #5f1192;
-  }
+header ul .list-item a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: E5B5E0;
+  font-family: "poppins";
+  margin: 0 50px;
+}
+header ul .logo a {
+  font-size: 2em;
+  padding: 12px 24px;
+  font-weight: 500;
 }
 
 /*Estilo Footer*/
@@ -174,48 +99,39 @@ footer .contenedor-footer .redes-sociales .copy {
 }
 
 /*Fin Footer*/
-/*Estilo Main Inicio*/
-.inicio {
-  background-image: url(../imagenes/fondo.jpg);
-  background-size: cover;
-}
-
-.titulo-inicio:hover {
-  color: palevioletred;
-  margin-left: 6px;
-}
-.titulo-inicio #hero {
-  margin-top: 0px;
-  height: 600px;
+#hero {
+  width: 100%;
+  height: 650px;
+  background-image: url(/imagenes/imagen.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 60px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.titulo-inicio #hero p {
-  color: black;
+#hero h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: E5B5E0;
+}
+#hero p {
+  color: E5B5E0;
   font-size: 24px;
   margin-bottom: 48px;
 }
-.titulo-inicio #hero a {
-  background-color: white;
+#hero a {
+  background-color: E5B5E0;
   padding: 12px 24px;
   border-radius: 8px;
-  color: black;
+  color: #383d34;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
   width: fit-content;
 }
-@media (max-width: 480px) {
-  .titulo-inicio #hero .titulo-inicio {
-    font-size: 30px;
-  }
-}
 
-/*Fin  Main Inicio*/
 /*Estilo Main Productos*/
 .titulo-products {
   background: linear-gradient(rgba(136, 22, 98, 0), transparent), url(../imagenes/fondo.jpg);

@@ -1,45 +1,32 @@
-/*Estilo Main Inicio*/
-.inicio {
-  background-image: url(../imagenes/fondo.jpg);
+#hero {
+  width: 100%;
+  height: 650px;
+  background-image: url(/imagenes/imagen.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-}
-.titulo-inicio {
-  @extend .abc;
-
-  &:hover {
-    color: $color-primario;
-    margin-left: 6px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: E5B5E0;
   }
-  #hero {
-    margin-top: 0px;
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 100px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    p {
-      color: black;
-      font-size: 24px;
-      margin-bottom: 48px;
-    }
-    a {
-      background-color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      color: black;
-      font-size: 18px;
-      font-weight: 500;
-      text-decoration: none;
-      width: fit-content;
-    }
-
-    @media (max-width: 480px) {
-      .titulo-inicio {
-        font-size: 30px;
-      }
-    }
+  p {
+    color: E5B5E0;
+    font-size: 24px;
+    margin-bottom: 48px;
+  }
+  a {
+    background-color: E5B5E0;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: #383d34;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    width: fit-content;
   }
 }
-/*Fin  Main Inicio*/
