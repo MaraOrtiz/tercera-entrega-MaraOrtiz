@@ -10,12 +10,22 @@ header {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 25px 0;
+  @include media-query-mobile() {
+    font-size: 18px;
+    justify-content: center;
+    padding: 8px 4px;
+  }
   ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    @include media-query-mobile() {
+      font-size: 14px;
+      justify-content: center;
+      padding: 8px 4px;
+    }
 
     .list-item a {
       text-decoration: none;
@@ -24,11 +34,21 @@ header {
       color: E5B5E0;
       font-family: "poppins";
       margin: 0 50px;
+      @include media-query-mobile() {
+        font-size: 14px;
+        justify-content: center;
+        padding: 8px 4px;
+      }
     }
     .logo a {
       font-size: 2em;
       padding: 12px 24px;
       font-weight: 500;
+      @include media-query-mobile() {
+        font-size: 18px;
+        justify-content: center;
+        padding: 8px 4px;
+      }
     }
   }
 }

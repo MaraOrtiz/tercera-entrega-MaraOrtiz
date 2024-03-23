@@ -1,30 +1,28 @@
 //Variables Header//
 
-$color_primario: #a84a94fd;
-$color_primario_suave: #8527c383;
+$color_primario: rgba(0, 0, 0, 0.5);
+$color_primario_suave: rgba(0, 0, 0, 0.3);
 $color_blanco: #fff;
-$altura_header: 100px;
+$altura_header: 80px;
 $padding_left_right: 2rem;
 $ancho_maximo: 1200px;
 
-$color-primario: palevioletred;
-
-:root .abc {
+.abc {
   background-image: linear-gradient (to right, palevioletred, white);
   text-decoration: none;
   font-family: "poppins";
   font-size: 60px;
-  margin: 150px;
-  margin-left: 0;
+
+  padding-left: 15px;
   text-align: center;
   color: black;
   font-weight: 500px;
-  border-bottom: 2px solid white;
-  margin-bottom: 100px;
-  padding-bottom: 10px;
   display: flex;
+
   cursor: pointer;
-  justify-items: center;
-  background: linear-gradient(rgba(136, 22, 98, 0), transparent),
-    url(../imagenes/fondo.jpg);
+}
+@mixin media-query-mobile() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
 }
